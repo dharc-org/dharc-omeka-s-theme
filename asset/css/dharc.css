@@ -1,8 +1,23 @@
 
+#search_pre{
+        position: absolute;
+        margin: 0 auto;
+        margin-top: 8%;
+        width: 40%;
+}
+#main_jumbotron{
+        position: absolute;
+        background-color: beige;
+        width: 100%;
+        min-height: 300px;
+}
 
 @media screen and (min-width: 800px){
+
     #search{
-      left: 0%!important;;
-      width: 40%;
+        top:50%!important;
+        margin: 0 auto;
+        left: 0%!important;
+        width: 40%;
     }
 }
