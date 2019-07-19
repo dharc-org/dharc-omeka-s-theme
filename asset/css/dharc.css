@@ -1,3 +1,8 @@
-header {
-  color: #726b85;
+
+
+@media screen and (min-width: 800px){
+    #search{
+      left: 0%!important;;
+      width: 40%;
+    }
 }
