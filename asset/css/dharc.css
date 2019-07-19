@@ -1,3 +1,22 @@
+header{
+        margin-bottom:10px!important;
+        padding:0 0%!important;
+}
+header nav{
+    font-size: 13pt;
+    padding:0 0%!important;
+}
+header nav{
+    display: inline-block!important;
+}
+.site-title{
+    display: inline-block!important;
+    width: 320px;
+    padding:0 10!important;
+    margin: 0!important;
+}
+
+
 #search_container{
     position: relative;
     margin: 0 auto;
@@ -9,7 +28,6 @@
     border: solid lightgray 2px;
     border-radius: 10px;
 }
-
 #search_pre .var-txt{
     color: chocolate;
     font-size: 18pt;
@@ -22,9 +40,6 @@
 }
 
 @media screen and (min-width: 800px){
-    header{
-        margin-bottom:10px!important;
-    }
     #search{
         position: relative!important;
         left: 0%!important;
