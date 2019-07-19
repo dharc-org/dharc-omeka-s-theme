@@ -1,15 +1,21 @@
-
-#search_pre{
-        margin: 0 auto;
-        padding-top: 150px;
-        width: 55%;
+#search_container{
+    position: relative;
+    margin: 0 auto;
+    left: 0%!important;
+    width: 55%;
+    background-color: rgba(247, 247, 247,0.7) ;
+    top: 150px;
+    padding: 15px;
+    border: solid lightgray 2px;
+    border-radius: 10px;
 }
+
 #search_pre .var-txt{
     color: chocolate;
     font-size: 18pt;
 }
 #main_jumbotron{
-        background-color: beige;
+        background-color: #a16c6c;
         width: 100%;
         min-height: 350px;
         border-bottom: lightgray solid 5px;
@@ -21,8 +27,7 @@
     }
     #search{
         position: relative!important;
-        margin: 0 auto;
         left: 0%!important;
-        width: 55%;
+        width: 100%;
     }
 }
