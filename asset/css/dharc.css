@@ -1,23 +1,28 @@
 
 #search_pre{
-        position: absolute;
         margin: 0 auto;
-        margin-top: 8%;
-        width: 40%;
+        padding-top: 150px;
+        width: 55%;
+}
+#search_pre .var-txt{
+    color: chocolate;
+    font-size: 18pt;
 }
 #main_jumbotron{
-        position: absolute;
         background-color: beige;
         width: 100%;
-        min-height: 300px;
+        min-height: 350px;
+        border-bottom: lightgray solid 5px;
 }
 
 @media screen and (min-width: 800px){
-
+    header{
+        margin-bottom:10px!important;
+    }
     #search{
-        top:50%!important;
+        position: relative!important;
         margin: 0 auto;
         left: 0%!important;
-        width: 40%;
+        width: 55%;
     }
 }
