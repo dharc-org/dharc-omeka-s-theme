@@ -46,9 +46,11 @@ endif;
             </nav>
         </header>
         <div id="main_jumbotron" class="jumbotron">
-          <div id="search_pre"><span class="fixed-txt">Search within our Digital Library of over </span><span class="var-txt">1000</span><span class="fixed-txt"> items:</span></div>
-          <div id="search">
-              <?php echo $this->partial('common/search-form'); ?>
+          <div id="search_container">
+              <div id="search_pre"><span class="fixed-txt">Search within our Digital Library of over </span><span class="var-txt">1000</span><span class="fixed-txt"> items:</span></div>
+              <div id="search">
+                  <?php echo $this->partial('common/search-form'); ?>
+              </div>
           </div>
         </div>
         <div id="content" role="main">
