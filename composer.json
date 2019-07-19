@@ -1,0 +1,7 @@
+{
+    "name": "omeka-s-themes/dharc-omeka-s-theme",
+    "type": "omeka-s-theme",
+    "require": {
+        "omeka/omeka-s": "*"
+    }
+}
