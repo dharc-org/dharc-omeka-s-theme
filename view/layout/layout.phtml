@@ -6,6 +6,7 @@ $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1')
 $this->headTitle($this->setting('installation_title', 'Omeka S'))->setSeparator(' · ');
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headLink()->prependStylesheet($this->assetUrl('css/iconfonts.css', 'Omeka'));
+$this->headLink()->prependStylesheet($this->assetUrl('css/dharc.css'));
 $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic,700');
 $this->headScript()->prependFile($this->assetUrl('js/default.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
@@ -55,8 +56,8 @@ endif;
             <?php if ($footerContent = $this->themeSetting('footer')): ?>
             <?php echo $footerContent; ?>
             <?php else: ?>
-		<?php 
-			echo $this->translate('Powered by Omeka S'); 
+		<?php
+			echo $this->translate('Powered by Omeka S');
 		?>
             <?php endif; ?>
         </footer>
