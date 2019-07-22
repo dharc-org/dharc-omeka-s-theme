@@ -17,7 +17,7 @@ header nav{
 }
 
 
-#search_container{
+.search-container{
     position: relative;
     margin: 0 auto;
     left: 0%!important;
@@ -28,11 +28,11 @@ header nav{
     border: solid lightgray 2px;
     border-radius: 10px;
 }
-#search_pre .var-txt{
+.search-pre .var-txt{
     color: chocolate;
     font-size: 18pt;
 }
-#main_jumbotron{
+.jumbotron{
         background-color: #a16c6c;
         width: 100%;
         min-height: 400px;
