@@ -2,12 +2,15 @@
 @media screen and (min-width: 800px){
 
     header{
+        padding: 0%!important;
         padding-right: 15px!important;
         padding-left: 15px!important;
     }
     header nav{
+        display: inline-block;
         font-size: 9pt;
         width: 45%!important;
+        padding: 0%!important;
     }
     .site-title{
         display: inline-block!important;
