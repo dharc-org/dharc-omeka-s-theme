@@ -1,48 +1,51 @@
-header{
-        margin-bottom:10px!important;
-        padding:0 0%!important;
-}
-header nav{
-    font-size: 13pt;
-    padding:0 0%!important;
-}
-header nav{
-    display: inline-block!important;
-}
-.site-title{
-    display: inline-block!important;
-    width: 320px;
-    padding:0 10!important;
-    margin: 0!important;
-}
-
-
-.search-container{
-    position: relative;
-    margin: 0 auto;
-    left: 0%!important;
-    width: 55%;
-    background-color: rgba(247, 247, 247,0.7) ;
-    top: 150px;
-    padding: 15px;
-    border: solid lightgray 2px;
-    border-radius: 10px;
-}
-.search-pre .var-txt{
-    color: chocolate;
-    font-size: 18pt;
-}
-.jumbotron{
-        background-color: #a16c6c;
-        width: 100%;
-        min-height: 400px;
-        border-bottom: lightgray solid 5px;
-}
 
 @media screen and (min-width: 800px){
+
+    header{
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+    }
+    header nav{
+        font-size: 9pt;
+        width: 45%!important;
+    }
+    .site-title{
+        display: inline-block!important;
+        width: fit-content;
+        padding:0 0 0 0!important;
+        margin-right: 0%!important;
+    }
     #search{
-        position: relative!important;
+        display: inline-block;
+        position:relative!important;
+        width: 24%!important;
         left: 0%!important;
-        width: 100%;
+        border: none!important;
+        padding-right: 0%!important;
+        margin-top: 10px;
+        float: right;
+    }
+
+    #search_container{
+            position: relative;
+            margin: 0 auto;
+            left: 0%!important;
+            width: 55%;
+            background-color: rgba(247, 247, 247,0.7) ;
+            top: 150px;
+            padding: 15px;
+            border: solid lightgray 2px;
+            border-radius: 10px;
+    }
+    #search_pre .var-txt{
+            color: chocolate;
+            font-size: 18pt;
+    }
+
+    #main_jumbotron{
+            background-color: #a16c6c;
+            width: 100%;
+            min-height: 400px;
+            border-bottom: lightgray solid 5px;
     }
 }
