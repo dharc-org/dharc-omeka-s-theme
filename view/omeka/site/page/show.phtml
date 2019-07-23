@@ -23,7 +23,9 @@ if ($activePage):
 
 <?php
   $jumbotron = '<div id="main_jumbotron" class="jumbotron"></div>';
-  echo $activePage;
+  foreach($activePage as $key=>$value) {
+    echo 'index is '.$key.' and value is '.$value;
+  }
   if ($activePage === "home"):
     $jumbotron = '<div id="main_jumbotron" class="jumbotron">Ciao</div>';
   endif;
