@@ -6,6 +6,5 @@ foreach ($page->blocks() as $block) {
         $layouts[$block->layout()] = null;
         $this->blockLayout()->prepareRender($block->layout());
     }
-    echo $block ;
     echo $this->blockLayout()->render($block);
 }
