@@ -46,6 +46,18 @@
         float: right;
     }
 
+    #main_jumbotron{
+            background-image: url("../../img/bg_img_3.jpg");
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-size: 100% 100%;
+            background-color: #a16c6c;
+            opacity: 0.9;
+            width: 100%;
+            min-height: 400px;
+            border-bottom: lightgray solid 5px;
+    }
+
     #jumbotron_search{
         margin-top: 10px;
     }
@@ -75,12 +87,6 @@
             font-size: 18pt;
     }
     #content #main_jumbotron{
-        padding: 0!important;
-    }
-    #main_jumbotron{
-            background-color: #a16c6c;
-            width: 100%;
-            min-height: 400px;
-            border-bottom: lightgray solid 5px;
+            padding: 0!important;
     }
 }
