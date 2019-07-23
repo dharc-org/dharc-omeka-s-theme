@@ -102,9 +102,16 @@
     .item-showcase{
       margin: 0 auto!important;
       background-color: var(--items_background-color);
-      border: solid 1px!important;
+      border: lightgray solid 2px!important;
       max-width: 80%;
       margin-bottom: 15px!important;
+      border-radius: 10px;
+    }
+    .item-showcase .item.resource{
+      opacity: 0.7;
+    }
+    .item-showcase .item.resource:hover{
+      opacity: 1;
     }
 }
 
