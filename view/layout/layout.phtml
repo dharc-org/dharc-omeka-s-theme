@@ -11,6 +11,10 @@ $this->headLink()->prependStylesheet('//fonts.googleapis.com/css?family=Open+San
 $this->headScript()->prependFile($this->assetUrl('js/default.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
 $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 'Omeka'));
+
+#dharc main js
+$this->headScript()->prependFile($this->assetUrl('js/dharc_main.js'));
+
 $this->trigger('view.layout');
 $title = $this->pageTitle($site->title());
 $userBar = $this->userBar();
