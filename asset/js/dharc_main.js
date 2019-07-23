@@ -1,5 +1,5 @@
 
-var PAGE_ITEM = "item";
+var PAGE_ITEM = "../item";
 
 $(document).ready(function() {
         /*Dynamic Blocks to add*/

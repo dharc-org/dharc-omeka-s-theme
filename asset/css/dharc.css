@@ -99,9 +99,18 @@
             padding: 0!important;
     }
 
+    .item-showcase-title{
+      margin: 0 auto;
+      max-width: 80%;
+      margin-top: 30px;
+      font-size: 14pt;
+    }
+    .item-showcase-title a{
+      color: var(--link-color)!important;
+    }
     .item-showcase{
       margin: 0 auto!important;
-      margin-top: 15px!important;
+      margin-top: 5px!important;
       margin-bottom: 15px!important;
       background-color: var(--items_background-color);
       border: lightgray solid 2px!important;
