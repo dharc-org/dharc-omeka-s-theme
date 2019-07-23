@@ -3,6 +3,7 @@
   --link-color: #b5692b;
   --link-hover-color: #96e3fa;
   --background-color: #f7f7f7;
+  --items_background-color: #fffdf5;
 }
 
 @media screen and (min-width: 800px){
@@ -97,4 +98,20 @@
     #content #main_jumbotron{
             padding: 0!important;
     }
+
+    .item-showcase{
+      margin: 0 auto!important;
+      background-color: var(--items_background-color);
+      border: solid 1px!important;
+      max-width: 80%;
+      margin-bottom: 15px!important;
+    }
+}
+
+
+
+@media screen and (max-width: 800px){
+  #main_jumbotron{
+    display: none;
+  }
 }
