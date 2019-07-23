@@ -123,6 +123,32 @@
     .item-showcase .item.resource:hover{
       opacity: 1;
     }
+
+
+    body.item.resource.show #content{
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+    body.item.resource.show #content .title{
+      font-size: 20pt;
+    }
+    body.item.resource.show #content .property + .property{
+      margin: 0px!important;
+    }
+    body.item.resource.show #content .property .values{
+      font-size: 12pt;
+      border: 0.5px solid lightgray;
+      background-color: white;
+      width: 50%;
+      padding: 10px;
+      border-radius: 7px;
+    }
+    body.item.resource.show #content .property h4{
+      font-size: 13pt;
+    }
+    .mirador.viewer.mirador-container{
+
+    }
 }
 
 
