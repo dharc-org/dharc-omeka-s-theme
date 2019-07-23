@@ -7,6 +7,14 @@
 
 @media screen and (min-width: 800px){
 
+    footer{
+        border-top: lightgray solid 2px;
+        background-color: white;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        padding-top: 15px!important;
+    }
+
     header{
         padding: 0%!important;
         padding-right: 15px!important;
