@@ -26,11 +26,11 @@
         margin-right: 0%!important;
     }
 
-    #content{
+    body.page #content{
       padding: 0!important;
       padding-top: 5px!important;
     }
-    #content .blocks{
+    body.page #content .blocks{
       padding-right: 3%!important;
       padding-left: 3%!important;
     }
