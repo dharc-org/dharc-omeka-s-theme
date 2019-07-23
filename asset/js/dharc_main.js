@@ -1,7 +1,7 @@
 
-var PAGE_ITEM = "https://137.204.168.8/s/digital-library/item";
+var PAGE_ITEM = "item";
 
 $(document).ready(function() {
         /*Dynamic Blocks to add*/
-        $("<a href='"+PAGE_ITEM+"'>Test</p>" ).insertBefore( "div .item-showcase" );
+        $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items &#10509;</a><div>" ).insertBefore( "div .item-showcase" );
 });
