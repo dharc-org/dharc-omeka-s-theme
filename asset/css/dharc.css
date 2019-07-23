@@ -1,3 +1,9 @@
+:root {
+  --main-theme-color: #c99281;
+  --link-color: #b5692b;
+  --link-hover-color: #96e3fa;
+  --background-color: #f7f7f7;
+}
 
 @media screen and (min-width: 800px){
 
@@ -5,6 +11,7 @@
         padding: 0%!important;
         padding-right: 15px!important;
         padding-left: 15px!important;
+        margin-bottom: 0%!important;
     }
     header nav{
         display: inline-block;
@@ -18,6 +25,7 @@
         padding:0 0 0 0!important;
         margin-right: 0%!important;
     }
+
     #search{
         display: inline-block;
         position:relative!important;
@@ -29,11 +37,24 @@
         float: right;
     }
 
+    #jumbotron_search{
+        margin-top: 10px;
+    }
+    #jumbotron_search input{
+        font-size: 13pt;
+        width: 80%;
+    }
+    #jumbotron_search button{
+        font-size: 13pt;
+        background-color: var(--link-color);
+        color: white;
+    }
+
     #search_container{
             position: relative;
             margin: 0 auto;
             left: 0%!important;
-            width: 55%;
+            width: fit-content;
             background-color: rgba(247, 247, 247,0.7) ;
             top: 150px;
             padding: 15px;
@@ -44,7 +65,9 @@
             color: chocolate;
             font-size: 18pt;
     }
-
+    #content #main_jumbotron{
+        padding: 0!important;
+    }
     #main_jumbotron{
             background-color: #a16c6c;
             width: 100%;
