@@ -17,26 +17,40 @@ $itemMedia = $item->media();
     ?>
     </div>
 <?php endif; ?>
-<?php echo $item->displayValues(); ?>
-<div class="property">
-    <?php $itemSets = $item->itemSets(); ?>
-    <?php if (count($itemSets) > 0): ?>
-    <h4><?php echo $translate('Item sets'); ?></h4>
-    <?php foreach ($itemSets as $itemSet): ?>
-    <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
-    <?php endforeach; ?>
-    <?php endif; ?>
+
+
+<div class="item-show">
+<!-- display image and infos -->
+<?php if (!$embedMedia && $itemMedia): ?>
+<div class="item-media">
+<?php   
+        $itemMediaImg = "<img class='item-img' src=".$itemMedia[0]->originalUrl()." width=300px> ";
+	echo $itemMediaImg;
+
+	//experiments from docs: https://omeka.org/s/docs/developer/key_concepts/representations/
+	#echo "id: ".$item->id()."<br/>";
+	#echo "title: ".$item->displayTitle()."<br/>";
+	#echo "desc: ".$item->displayDescription()."<br/>";
+?>
+</div>
+<?php endif; ?>
+
+
+<!-- display item metadata -->
+<div class="item-metadata">
+  <?php echo $item->displayValues(); ?>
+  <div class="property">
+     <?php $itemSets = $item->itemSets(); ?>
+     <?php if (count($itemSets) > 0): ?>
+     <h4><?php echo $translate('Item sets'); ?></h4>
+     <?php foreach ($itemSets as $itemSet): ?>
+     <div class="value"><a href="<?php echo $escape($itemSet->url()); ?>"><?php echo $itemSet->displayTitle(); ?></a></div>
+     <?php endforeach; ?>
+     <?php endif; ?>
+  </div>
 </div>
 
-<!-- MODIFICA: disable Media-List
-<?php //if (!$embedMedia && $itemMedia): ?>
-<div class="media-list">
-    <?php //foreach ($itemMedia as $media): ?>
-        <?php //echo $media->linkPretty(); ?>
-    <?php //endforeach; ?>
 </div>
-<?php //endif; ?>
--->
 
 <?php
 $page = $this->params()->fromQuery('page', 1);

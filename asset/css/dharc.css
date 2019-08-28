@@ -84,7 +84,7 @@
             position: relative;
             margin: 0 auto;
             left: 0%!important;
-            width: fit-content;
+	    display: table;
             background-color: rgba(247, 247, 247,0.7) ;
             top: 150px;
             padding: 15px;
@@ -139,19 +139,33 @@
       font-size: 12pt;
       border: 0.5px solid lightgray;
       background-color: white;
-      width: 50%;
-      padding: 10px;
+      width: 75%;
+      padding: 5px;
       border-radius: 7px;
     }
     body.item.resource.show #content .property h4{
       font-size: 13pt;
     }
     .mirador.viewer.mirador-container{
-
+      clear: both;
     }
+
+    .item-img{
+      border-radius: 15px;
+    }    
+
+    .item-show{
+    }
+    .item-media{
+       float:left;
+       width:30%;
+    }
+    .item-metadata{
+       float:left;
+       width:70%;
+    }
+
 }
-
-
 
 @media screen and (max-width: 800px){
   #main_jumbotron{
