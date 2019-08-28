@@ -23,6 +23,7 @@ if ($activePage):
 
 
 <?php
+  //echo "active page: ".$activePage['page'];
   if ($activePage['page'] == "Home"):
 
     $itemNum = $this->api()->search('items', ['limit' => 0])->getTotalResults();
