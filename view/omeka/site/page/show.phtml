@@ -8,8 +8,9 @@ $showPagePagination = $this->siteSetting('show_page_pagination', true);
 $nav = $site->publicNav();
 $container = $nav->getContainer();
 $activePage = $nav->findActive($container);
-if ($activePage):
 ?>
+
+<?php if ($activePage): ?>
     <?php if ($activePage['depth'] !== 0): ?>
     <nav class="breadcrumbs"><?php echo $nav->breadcrumbs(); ?></nav>
     <?php endif; ?>
