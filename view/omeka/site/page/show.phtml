@@ -10,6 +10,10 @@ $container = $nav->getContainer();
 $activePage = $nav->findActive($container);
 ?>
 
+
+<?php if ($activePage['page'] != "view"): ?>
+
+
 <?php if ($activePage): ?>
     <?php if ($activePage['depth'] !== 0): ?>
     <nav class="breadcrumbs"><?php echo $nav->breadcrumbs(); ?></nav>
@@ -52,4 +56,6 @@ $activePage = $nav->findActive($container);
 <?php $this->trigger('view.show.after'); ?>
 <?php if ($showPagePagination): ?>
 <?php echo $this->sitePagePagination(); ?>
+<?php endif; ?>
+
 <?php endif; ?>
