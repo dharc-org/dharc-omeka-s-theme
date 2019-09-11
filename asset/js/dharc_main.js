@@ -7,4 +7,6 @@ $(document).ready(function() {
 
         $("<a href='"+PAGE_ITEM+"/view'>").insertBefore( ".item-img");
         $("</a>").insertAfter( ".item-img");
+
+        $("HIII").insertAfter( "body");
 });
