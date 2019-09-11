@@ -11,5 +11,3 @@ $(document).ready(function() {
         $(".item-img").wrap("<a href='"+String(window.location.href)+"/view.html'></a>");
 
 });
-
-});
