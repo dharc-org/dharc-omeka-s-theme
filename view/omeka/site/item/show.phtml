@@ -23,8 +23,8 @@ $itemMedia = $item->media();
 <!-- display image and infos -->
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="item-media">
-<?php   
-        $itemMediaImg = "<img class='item-img' src=".$itemMedia[0]->originalUrl()." width=300px> ";
+<?php
+        $itemMediaImg = "<img class='item-img' src=".$itemMedia[0]->originalUrl()." href='view.phtml' width=300px> ";
 	echo $itemMediaImg;
 
 	//experiments from docs: https://omeka.org/s/docs/developer/key_concepts/representations/
