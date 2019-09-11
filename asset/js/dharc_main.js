@@ -8,8 +8,8 @@ $(document).ready(function() {
         console.log($(".item-img"));
         console.log(String(window.location.href));
 
-        $(".item-img").click(function() {
-          window.location = String(window.location.href)+"/view.html"
-        });
+        $(".item-img").wrap("<a href='"+String(window.location.href)+"/view.html'></a>");
+
+});
 
 });
