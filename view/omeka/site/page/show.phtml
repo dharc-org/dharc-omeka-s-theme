@@ -8,8 +8,13 @@ $showPagePagination = $this->siteSetting('show_page_pagination', true);
 $nav = $site->publicNav();
 $container = $nav->getContainer();
 $activePage = $nav->findActive($container);
-if ($activePage):
+echo "active page: ".$activePage;
+echo "active page: ".$container;
+echo "active page: ".$nav;
 ?>
+
+<?php
+  if ($activePage):
     <?php if ($activePage['depth'] !== 0): ?>
     <nav class="breadcrumbs"><?php echo $nav->breadcrumbs(); ?></nav>
     <?php endif; ?>
@@ -23,7 +28,6 @@ if ($activePage):
 
 
 <?php
-  //echo "active page: ".$activePage['page'];
   if ($activePage['page'] == "Home"):
 
     $itemNum = $this->api()->search('items', ['limit' => 0])->getTotalResults();
@@ -34,7 +38,7 @@ if ($activePage):
 	<div id="search_container">
 	  <div id="search_pre">
 	   <span class="fixed-txt">Search within our Digital Library over </span>
-	   <span class="var-txt">'.$itemNum.'</span><span class="fixed-txt"> items and 
+	   <span class="var-txt">'.$itemNum.'</span><span class="fixed-txt"> items and
        <span class="var-txt">'.$item_setsNum.'</span> collections:</span>
 	</div>
     <div id="jumbotron_search">';
