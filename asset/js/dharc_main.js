@@ -6,6 +6,9 @@ $(document).ready(function() {
         $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items &#10509;</a><div>" ).insertBefore( "div .item-showcase" );
 
         console.log($(".item-img"));
-        $("<a href='"+PAGE_ITEM+"/view'>").insertBefore( ".item-img");
-        $("</a>").insertAfter( ".item-img");
+        console.log(String(window.location.href));
+
+        $(".item-img").before("<a href='"+String(window.location.href)+"/view'>");
+        $(".item-img").after("</a>");
+
 });
