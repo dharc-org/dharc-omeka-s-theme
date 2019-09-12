@@ -8,6 +8,9 @@ $showPagePagination = $this->siteSetting('show_page_pagination', true);
 $nav = $site->publicNav();
 $container = $nav->getContainer();
 $activePage = $nav->findActive($container);
+$path =  $_SERVER["REQUEST_URI"];
+$parts = explode('/', $path);
+$currentPage = end($parts);
 ?>
 
 <?php if ($activePage): ?>
@@ -52,4 +55,8 @@ $activePage = $nav->findActive($container);
 <?php $this->trigger('view.show.after'); ?>
 <?php if ($showPagePagination): ?>
 <?php echo $this->sitePagePagination(); ?>
+<?php endif; ?>
+
+<?php if ($currentPage == "view"): ?>
+  <script>init_view();</script>
 <?php endif; ?>
