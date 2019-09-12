@@ -8,14 +8,6 @@
 
 @media screen and (min-width: 800px){
 
-    footer{
-        border-top: lightgray solid 2px;
-        background-color: white;
-        padding-right: 15px!important;
-        padding-left: 15px!important;
-        padding-top: 15px!important;
-    }
-
     header{
         padding: 0%!important;
         padding-right: 15px!important;
@@ -39,9 +31,29 @@
       padding: 0!important;
       padding-top: 5px!important;
     }
+    body #content{
+     min-height: 70vw !important;
+    }
+    body #content:after {
+      content: "";
+      display: block;
+      height: 0px; /* the footer's total height */
+    }
+
+    footer{
+        border-top: lightgray solid 2px;
+        background-color: white;
+        padding-right: 15px!important;
+        padding-left: 15px!important;
+        padding-top: 15px!important;
+        height: 100px;
+    }
+
+
     body.page #content .blocks{
       padding-right: 3%!important;
       padding-left: 3%!important;
+      min-height: 100vh;
     }
 
     #search{
@@ -181,8 +193,8 @@
       display: none !important;
     }
 
-    footer{
-      margin-top: 100vh !important;
+    .item.resource.show footer{
+
     }
 
 }
