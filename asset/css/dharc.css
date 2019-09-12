@@ -181,6 +181,10 @@
       display: none !important;
     }
 
+    footer{
+      margin-top: 100vh !important;
+    }
+
 }
 
 @media screen and (max-width: 800px){
