@@ -8,9 +8,19 @@ $showPagePagination = $this->siteSetting('show_page_pagination', true);
 $nav = $site->publicNav();
 $container = $nav->getContainer();
 $activePage = $nav->findActive($container);
+
+
 $path =  $_SERVER["REQUEST_URI"];
 $parts = explode('/', $path);
-$currentPage = end($parts);
+$re = '/page\/view(.*)/';
+$item = "";
+$is_view = false;
+preg_match($re, $path, $matches, PREG_OFFSET_CAPTURE, 0);
+if ($matches):
+  $is_view = true;
+  $groups = array_values($matches);
+  $item = $matches[1][0];
+endif;
 ?>
 
 <?php if ($activePage): ?>
@@ -57,6 +67,6 @@ $currentPage = end($parts);
 <?php echo $this->sitePagePagination(); ?>
 <?php endif; ?>
 
-<?php if ($currentPage == "view"): ?>
+<?php if ($is_view === true): ?>
   <script>init_view();</script>
 <?php endif; ?>
