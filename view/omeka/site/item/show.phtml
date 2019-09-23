@@ -24,14 +24,17 @@ $itemMedia = $item->media();
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="item-media">
 <?php
-        $itemMediaImg = "<img class='item-img' src=".$itemMedia[0]->originalUrl()." width=300px>";
+    $itemMediaImg = "<img class='item-img' src=".$itemMedia[0]->originalUrl()." width=300px>";
 	echo $itemMediaImg;
+
+    
 
 	//experiments from docs: https://omeka.org/s/docs/developer/key_concepts/representations/
 	#echo "id: ".$item->id()."<br/>";
 	#echo "title: ".$item->displayTitle()."<br/>";
 	#echo "desc: ".$item->displayDescription()."<br/>";
 ?>
+    <!-- <div class="item-overlay">View item</div> -->
 </div>
 <?php endif; ?>
 
