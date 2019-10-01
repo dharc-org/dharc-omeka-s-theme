@@ -179,7 +179,8 @@
         padding-bottom:0
     }
     header nav ul li.active{
-        font-weight:bold
+        font-weight:bold;
+	background-color: #dedede;
     }
     header nav ul li>ul:before{
         font-family:"Font Awesome 5 Free";
@@ -635,6 +636,7 @@
     }
     .property{
         padding: 0 0 20px 10px;
+        min-width: 600px;
     }
     .property h4{
         margin-bottom:0px;
