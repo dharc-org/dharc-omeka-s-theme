@@ -23,17 +23,21 @@ $itemMedia = $item->media();
 <!-- display image and infos -->
 <?php if (!$embedMedia && $itemMedia): ?>
 <div class="item-media">
+  <div class="item-view-img">
+  <a class="item-view-button btn btn-primary">
+   <span class="fa fa-lg fa-search-plus"></span>
+   View Item
+  </a>
 <?php
     $itemMediaImg = "<img class='item-img' src=".$itemMedia[0]->originalUrl()." width=300px>";
 	echo $itemMediaImg;
-
-    
 
 	//experiments from docs: https://omeka.org/s/docs/developer/key_concepts/representations/
 	#echo "id: ".$item->id()."<br/>";
 	#echo "title: ".$item->displayTitle()."<br/>";
 	#echo "desc: ".$item->displayDescription()."<br/>";
 ?>
+  </div>
 </div>
 <?php endif; ?>
 

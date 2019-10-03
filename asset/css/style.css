@@ -636,7 +636,7 @@
     }
     .property{
         padding: 0 0 20px 10px;
-        min-width: 600px;
+        /* min-width: 600px; */
     }
     .property h4{
         margin-bottom:0px;

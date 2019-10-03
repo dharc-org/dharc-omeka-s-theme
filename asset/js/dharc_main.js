@@ -14,6 +14,9 @@ function init_mirador_item_link() {
   var url_parts = request_url.split("/");
   var item_id = url_parts[url_parts.length - 1];
   $(".item-img").wrap("<a href='"+BASE_PAGE+"view"+"?id="+item_id+"&type=item'></a>");
+
+  $(".item-view-button").attr("href", BASE_PAGE+"view"+"?id="+item_id+"&type=item");
+
 }
 
 function init_mirador_config() {

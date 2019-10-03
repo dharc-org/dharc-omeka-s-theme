@@ -108,9 +108,8 @@
             font-size: 18pt;
     }
     #content #main_jumbotron{
-            padding: 0!important;
+      padding: 0 !important;
     }
-
     .item-showcase-title{
       margin: 0 auto;
       max-width: 80%;
@@ -174,18 +173,41 @@
        margin-right: 10px;
     }
     
+    .item-img{
+      border-radius: 15px;
+    }
+    
+    .item-view-button {
+      position: absolute;
+      width: 150px;
+      height: 40px;
+      margin-top: 10px;
+      margin-left: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: #577284; /* blue #0052cc | green #006622 */
+      color: white!important;
+      font-size: 18px;
+      text-align: center;
+      display: none;
+    }
+    
+    .item-view-button:visited {
+      color: white!important;
+    }
+   
+    .item-view-img:hover .item-view-button{
+      display: block;
+    }
+
+    .item-view-img:hover {
+      opacity: 0.9;
+    }
+
     .item-metadata{
        float:left;
        width:70%;
        max-width: 900px;
-    }
-
-    .item-img{
-      border-radius: 15px;
-    }
-       
-    .item-img:hover{ 
-      opacity: 0.5; 
     }
 
     .page.view-mirador
