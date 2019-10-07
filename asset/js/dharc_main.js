@@ -16,6 +16,9 @@ function init_mirador_item_link() {
   $(".item-img").wrap("<a href='"+BASE_PAGE+"view"+"?id="+item_id+"&type=item'></a>");
 
   $(".item-view-button").attr("href", BASE_PAGE+"view"+"?id="+item_id+"&type=item");
+  
+  $('.item-iiif').prepend('<img class="item-iiif-img" />')
+  $(".item-iiif-img").wrap("<a href='https://137.204.168.8/iiif/"+item_id+"/manifest'></a>");
 
 }
 

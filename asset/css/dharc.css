@@ -135,7 +135,6 @@
       opacity: 1;
     }
 
-
     body.item.resource.show #content{
       padding-right: 30px;
       padding-left: 30px;
@@ -203,11 +202,22 @@
     .item-view-img:hover {
       opacity: 0.9;
     }
+    
+    .item-iiif{
+    }
+    
+    .item-iiif-img{
+      background-image: url("../../img/IIIF_logo.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 35px;
+      height: 35px;
+    }
 
     .item-metadata{
-       float:left;
-       width:70%;
-       max-width: 900px;
+      float:left;
+      width:70%;
+      max-width: 900px;
     }
 
     .page.view-mirador
