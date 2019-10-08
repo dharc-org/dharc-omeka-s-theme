@@ -1,10 +1,10 @@
 
 var PAGE_ITEM = "../item";
 
-var BASE_URL = "http://137.204.168.8"
-var BASE_PAGE = BASE_URL+"/s/digital-library/page/";
-var BASE_IIIF = BASE_URL+"/iiif/";
 var BASE_PATH = "/";
+var BASE_URL = "http://137.204.168.8"+BASE_PATH
+var BASE_PAGE = BASE_URL+"s/digital-library/page/";
+var BASE_IIIF = BASE_URL+"iiif/";
 
 $(document).ready(function() {
         $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items &#10509;</a><div>" ).insertBefore( "div .item-showcase" );
