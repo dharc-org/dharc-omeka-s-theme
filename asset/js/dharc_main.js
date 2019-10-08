@@ -1,8 +1,9 @@
 
 var PAGE_ITEM = "../item";
 
-var BASE_PAGE = "http://137.204.168.8/s/digital-library/page/";
-var BASE_URL = "http://137.204.168.8/iiif/";
+var BASE_URL = "http://137.204.168.8"
+var BASE_PAGE = BASE_URL+"/s/digital-library/page/";
+var BASE_IIIF = BASE_URL+"/iiif/";
 var BASE_PATH = "/";
 
 $(document).ready(function() {
@@ -19,7 +20,7 @@ function init_mirador_item_link() {
   $(".item-view-button").attr("href", BASE_PAGE+"view"+"?id="+item_id+"&type=item");
   
   $('.item-iiif').prepend('<img class="item-iiif-img" />');
-  $(".item-iiif-img").wrap("<a href='"+BASE_URL+item_id+"/manifest'></a>");
+  $(".item-iiif-img").wrap("<a href='"+BASE_IIIF+item_id+"/manifest'></a>");
 
 }
 
@@ -48,12 +49,12 @@ function init_mirador_config() {
 
   if (mirador_type == "item") {
     mirador_browser = mirador_item_id+"/manifest";
-    mirador_item_obj["data"].push({"manifestUri": BASE_URL+mirador_browser});
-    mirador_item_obj["windowObjects"] = [{"loadedManifest": BASE_URL+mirador_browser}];
+    mirador_item_obj["data"].push({"manifestUri": BASE_IIIF+mirador_browser});
+    mirador_item_obj["windowObjects"] = [{"loadedManifest": BASE_IIIF+mirador_browser}];
     url_suf = "?id="+mirador_item_id+"&type=item";
   }
   else if (mirador_type == "collection") {
-    mirador_item_obj["data"].push({"collectionUri": BASE_URL+"collection/"+mirador_item_id+","});
+    mirador_item_obj["data"].push({"collectionUri": BASE_IIIF+"collection/"+mirador_item_id+","});
     mirador_item_obj["openManifestsPage"] = true;
     url_suf = "?id="+mirador_item_id+"&type=collection";
   }
