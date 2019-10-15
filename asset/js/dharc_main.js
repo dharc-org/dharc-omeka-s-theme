@@ -2,7 +2,8 @@
 var PAGE_ITEM = "../item";
 
 var BASE_PATH = "/";
-var BASE_URL = "http://137.204.168.8"+BASE_PATH
+var BASE_ADDR = "137.204.168.8";
+var BASE_URL = "http://"+BASE_ADDR+BASE_PATH;
 var BASE_PAGE = BASE_URL+"s/digital-library/page/";
 var BASE_IIIF = BASE_URL+"iiif/";
 
