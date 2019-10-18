@@ -7,19 +7,20 @@ var BASE_HREF = location.href;
 var BASE_ARRAY = BASE_HREF.split(BASE_HOSTNAME);
 var BASE_DIRS = BASE_ARRAY[1].split("/");
 var k = BASE_DIRS.length - 2;
-
-var BASE_PATH = "/";
-
 var PAGE = "";
 for (i = 1; i < k ; i++) {
   PAGE = PAGE+BASE_DIRS[i]+"/";
-  if (i == 1 && BASE_DIRS[i] != "s") var BASE_PATH = "/"+BASE_DIRS[i]+"/";
 }
-PAGE = "/"+PAGE+"page/";
+PAGE = PAGE+"page/";
 
-var BASE_URL = "http://"+BASE_HOSTNAME;
-var BASE_PAGE = BASE_URL+PAGE; // BASE_URL+"s/digital-library/page/";
-var BASE_IIIF = BASE_URL+BASE_PATH+"iiif/";
+//alert (BASE_HOSTNAME+" |  "+BASE_HREF+" | "+k+" | "+PAGE);
+// http:// 137.204.168.8 /s/digital-library/item/18
+
+var BASE_PATH = "/";
+var BASE_URL = "http://"+BASE_HOSTNAME+BASE_PATH;
+//var BASE_PAGE = BASE_URL+"s/digital-library/page/";
+var BASE_PAGE = BASE_URL+PAGE;
+var BASE_IIIF = BASE_URL+"iiif/";
 
 $(document).ready(function() {
   $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items &#10509;</a><div>" ).insertBefore( "div .item-showcase" );
