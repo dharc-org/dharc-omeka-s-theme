@@ -203,11 +203,19 @@
       opacity: 0.9;
     }
     
-    .item-iiif{
+    .item-export{
     }
     
     .item-iiif-img{
       background-image: url("../../img/IIIF_logo.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 35px;
+      height: 35px;
+    }
+
+    .item-json-img{
+      background-image: url("../../img/JSON_logo.png");
       background-repeat: no-repeat;
       background-size: cover;
       width: 35px;

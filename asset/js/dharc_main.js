@@ -1,4 +1,6 @@
+// asset/js/dharc_main.js
 
+// define global vars
 var PAGE_ITEM = "../item";
 
 var BASE_HOSTNAME = location.hostname;
@@ -9,7 +11,6 @@ var BASE_DIRS = BASE_ARRAY[1].split("/");
 var k = BASE_DIRS.length - 2;
 
 var BASE_PATH = "/";
-
 var PAGE = "";
 for (i = 1; i < k ; i++) {
   PAGE = PAGE+BASE_DIRS[i]+"/";
@@ -20,6 +21,7 @@ PAGE = "/"+PAGE+"page/";
 var BASE_URL = "http://"+BASE_HOSTNAME;
 var BASE_PAGE = BASE_URL+PAGE; // BASE_URL+"s/digital-library/page/";
 var BASE_IIIF = BASE_URL+BASE_PATH+"iiif/";
+
 
 $(document).ready(function() {
   $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items &#10509;</a><div>" ).insertBefore( "div .item-showcase" );
@@ -34,8 +36,11 @@ function init_mirador_item_link() {
 
   $(".item-view-button").attr("href", BASE_PAGE+"view"+"?id="+item_id+"&type=item");
   
-  $('.item-iiif').prepend('<img class="item-iiif-img" />');
+  $('.item-export').prepend('<img class="item-iiif-img" />');
   $(".item-iiif-img").wrap("<a href='"+BASE_IIIF+item_id+"/manifest'></a>");
+
+  $('.item-export').append('<img class="item-json-img" />');
+  $(".item-json-img").wrap("<a href='http://137.204.168.8/api/items/"+item_id+"'></a>");
 
 }
 
