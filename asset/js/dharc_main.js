@@ -40,8 +40,9 @@ function init_export_item_link() {
   $(".item-json-img").wrap("<a href='"+BASE_URL+"/api/items/"+item_id+"'></a>");
 
   $('.item-metadata').append('<div class="property" id="IIIF-manifest"/>');
-  $('#IIIF-manifest').append('<h4>IIIF Manifest</h4><div class="value" id="IIIF-value">');
-  $('#IIIF-value').append('<a href="'+BASE_IIIF+item_id+'">'+BASE_IIIF+item_id+'</a>');
+  $('#IIIF-manifest').append('<h4>IIIF Manifest</h4><div class="values" id="IIIF-values">');
+  $('#IIIF-values').append('<div class="value uri" id="IIIF-value">');
+  $('#IIIF-value').append('<a class="url-value-link" href="'+BASE_IIIF+item_id+'" target="_blank">'+BASE_IIIF+item_id+'</a>');
 }
 
 function init_mirador_item_link() {
