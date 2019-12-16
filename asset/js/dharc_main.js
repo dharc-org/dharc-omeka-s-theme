@@ -3,8 +3,8 @@
 // define global vars
 var PAGE_ITEM = "../item";
 
-var BASE_HOSTNAME = location.hostname;
-var BASE_HREF = location.href;
+var BASE_HOSTNAME = location.hostname; //i.e. dl.domain.org 
+var BASE_HREF = location.href; //i.e. https://dl.domain.org/item/1
 
 var BASE_ARRAY = BASE_HREF.split(BASE_HOSTNAME);
 var BASE_DIRS = BASE_ARRAY[1].split("/");
@@ -18,9 +18,9 @@ for (i = 1; i < k ; i++) {
 }
 PAGE = "/"+PAGE+"page/";
 
-var BASE_URL = "http://"+BASE_HOSTNAME;
-var BASE_PAGE = BASE_URL+PAGE; // BASE_URL+"s/digital-library/page/";
-var BASE_IIIF = BASE_URL+BASE_PATH+"iiif/";
+var BASE_URL = location.protocol+"//"+BASE_HOSTNAME; //i.e. https://dl.domain.org
+var BASE_PAGE = BASE_URL+PAGE; // BASE_URL+"s/digital-library/page/" i.e. https://dl.domain.org/page/
+var BASE_IIIF = BASE_URL+BASE_PATH+"iiif/"; //i.e. https://dl.domain.org/iiif/
 
 
 $(document).ready(function() {
@@ -28,20 +28,30 @@ $(document).ready(function() {
 });
 
 
-function init_mirador_item_link() {
+function init_export_item_link() {
   var request_url = window.location.href;
   var url_parts = request_url.split("/");
   var item_id = url_parts[url_parts.length - 1];
-  $(".item-img").wrap("<a href='"+BASE_PAGE+"view"+"?id="+item_id+"&type=item'></a>");
 
-  $(".item-view-button").attr("href", BASE_PAGE+"view"+"?id="+item_id+"&type=item");
-  
   $('.item-export').prepend('<img class="item-iiif-img" />');
   $(".item-iiif-img").wrap("<a href='"+BASE_IIIF+item_id+"/manifest'></a>");
 
   $('.item-export').append('<img class="item-json-img" />');
-  $(".item-json-img").wrap("<a href='http://137.204.168.8/api/items/"+item_id+"'></a>");
+  $(".item-json-img").wrap("<a href='"+BASE_URL+"/api/items/"+item_id+"'></a>");
 
+  $('.item-metadata').append('<div class="property" id="IIIF-manifest"/>');
+  $('#IIIF-manifest').append('<h4>IIIF Manifest</h4><div class="value" id="IIIF-value">');
+  $('#IIIF-value').append('<a href="'+BASE_IIIF+item_id+'">'+BASE_IIIF+item_id+'</a>');
+}
+
+function init_mirador_item_link() {
+  var request_url = window.location.href;
+  var url_parts = request_url.split("/");
+  var item_id = url_parts[url_parts.length - 1];
+
+  $(".item-img").wrap("<a href='"+BASE_PAGE+"view"+"?id="+item_id+"&type=item'></a>");
+
+  $(".item-view-button").attr("href", BASE_PAGE+"view"+"?id="+item_id+"&type=item");
 }
 
 function init_mirador_config() {
