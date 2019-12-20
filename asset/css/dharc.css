@@ -224,8 +224,9 @@
 
     .item-metadata{
       float:left;
-      width:70%;
+      width:100%;
       max-width: 900px;
+      min-width: 650px;
     }
 
     .page.view-mirador
