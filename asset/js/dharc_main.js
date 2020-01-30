@@ -21,10 +21,10 @@ PAGE = "/"+PAGE+"page/";
 var BASE_URL = location.protocol+"//"+BASE_HOSTNAME; //i.e. https://dl.domain.org
 var BASE_PAGE = BASE_URL+PAGE; // BASE_URL+"s/digital-library/page/" i.e. https://dl.domain.org/page/
 var BASE_IIIF = BASE_URL+BASE_PATH+"iiif/"; //i.e. https://dl.domain.org/iiif/
-
+var BASE_API = BASE_URL+BASE_PATH+"api/"; //i.e. https://dl.domain.org/api/
 
 $(document).ready(function() {
-  $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items &#10509;</a><div>" ).insertBefore( "div .item-showcase" );
+  $("<div class='item-showcase-title'><a href='"+PAGE_ITEM+"'>The Digital Library items</a><div>" ).insertBefore( "div .item-showcase" );
 });
 
 
@@ -37,7 +37,7 @@ function init_export_item_link() {
   $(".item-iiif-img").wrap("<a href='"+BASE_IIIF+item_id+"/manifest'></a>");
 
   $('.item-export').append('<img class="item-json-img" />');
-  $(".item-json-img").wrap("<a href='"+BASE_URL+"/api/items/"+item_id+"'></a>");
+  $(".item-json-img").wrap("<a href='"+BASE_API+"items/"+item_id+"'></a>");
 
   $('.item-metadata').append('<div class="property" id="IIIF-manifest"/>');
   $('#IIIF-manifest').append('<h4>IIIF Manifest</h4><div class="values" id="IIIF-values">');
