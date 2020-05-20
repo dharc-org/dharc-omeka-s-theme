@@ -1,9 +1,8 @@
 :root {
   --main-theme-color: #c99281;
-  --link-color: #b5692b;
-  --link-hover-color: #96e3fa;
-  --background-color: #f7f7f7;
-  --items_background-color: #faf5f0;
+  --link-color: #C38755;
+  --items_background-color: #f9f3ee;
+  --footer_background-color: #545c5d;
 }
 
 @media screen and (min-width: 800px){
@@ -13,13 +12,25 @@
         padding-right: 15px!important;
         padding-left: 15px!important;
         margin-bottom: 0%!important;
+        background-color: darkgray!impo;
     }
     header nav{
         display: inline-block;
-        font-size: 9pt;
+        font-size: 12pt;
         width: 45%!important;
         padding: 0%!important;
     }
+    header nav .navigation li.active{
+      background-color: white!important;
+    }
+    header nav .navigation li.active a{
+      color: var(--link-color);
+    }
+    header nav .navigation li a:hover{
+      color: var(--link-color);
+    }
+
+
     .site-title{
         display: inline-block!important;
         width: fit-content;
@@ -30,10 +41,11 @@
     body.page #content{
       padding: 0!important;
       padding-top: 5px!important;
+      margin-left: 0!important;
+      margin-right: 0!important;
+      max-width: none;
     }
-    body #content{
-     min-height: 70vw !important;
-    }
+    body #content{}
     body #content:after {
       content: "";
       display: block;
@@ -42,18 +54,22 @@
 
     footer{
         border-top: lightgray solid 2px;
-        background-color: white;
+        border-bottom: lightgray solid 1px;
+        background-color: var(--footer_background-color);
         padding-right: 15px!important;
         padding-left: 15px!important;
         padding-top: 15px!important;
+        margin: 0!important;
         height: 100px;
+        max-width: none!important;
     }
 
 
     body.page #content .blocks{
       padding-right: 3%!important;
       padding-left: 3%!important;
-      min-height: 100vh;
+      height: fit-content;
+      margin-bottom: 150px;
     }
 
     #search{
@@ -75,7 +91,7 @@
             background-color: #a16c6c;
             opacity: 0.9;
             width: 100%;
-            min-height: 400px;
+            min-height: 450px;
             border-bottom: lightgray solid 5px;
     }
 
@@ -90,6 +106,12 @@
         font-size: 13pt;
         background-color: var(--link-color);
         color: white;
+        border-radius: 5px;
+        opacity: 0.8;
+        width: 18%;
+    }
+    #jumbotron_search button:hover{
+      opacity: 1;
     }
 
     #search_container{
@@ -159,11 +181,11 @@
     .mirador.viewer.mirador-container{
       clear: both;
     }
-       
+
     .item-show{
        display: inline-flex;
     }
-    
+
     .item-media{
        float:left;
        /* position: relative; */
@@ -171,11 +193,11 @@
        max-width: 300px;
        margin-right: 10px;
     }
-    
+
     .item-img{
       border-radius: 15px;
     }
-    
+
     .item-view-button {
       position: absolute;
       width: 150px;
@@ -190,11 +212,11 @@
       text-align: center;
       display: none;
     }
-    
+
     .item-view-button:visited {
       color: white!important;
     }
-   
+
     .item-view-img:hover .item-view-button{
       display: block;
     }
@@ -202,10 +224,10 @@
     .item-view-img:hover {
       opacity: 0.9;
     }
-    
+
     .item-export{
     }
-    
+
     .item-iiif-img{
       background-image: url("../../img/IIIF_logo.png");
       background-repeat: no-repeat;
@@ -256,7 +278,7 @@
     display: none;
   }
 
-  .page.view-mirador 
+  .page.view-mirador
   #mirador-view {
     padding: 0;
     margin: 0;

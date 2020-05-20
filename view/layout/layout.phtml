@@ -69,10 +69,31 @@ endif;
             <?php echo $this->content; ?>
         </div>
         <footer>
-            <?php if ($footerContent = $this->themeSetting('footer')): ?>
-            <?php echo $footerContent; ?>
-            <?php else: ?>
-            <?php endif; ?>
+
+            <div class="top-footer first-section">
+              <p>
+                <?php if ($this->themeSetting('logo')): ?>
+                <a href="<?php echo $site->url(); ?>" class="site-title"><img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" title="Logo"></a>
+                <?php else: ?>
+                <a href="<?php echo $site->url(); ?>" class="site-title"><?php echo $this->pageTitle($site->title()); ?></a>
+                <?php endif; ?>
+              </p>
+              <!--<p class="footer-text"><a class="footer-a cursor-pointer" onclick="changePage('documentazione_progetto')">Documentazione del progetto</a></p>-->
+              <p class="footer-text"><a href="https://www.unibo.it/en/university/privacy-policy-and-legal-notes/privacy-policy/information-note-on-the-processing-of-personal-data" alt="Privacy policy" target="_black" class="footer-a">Privacy Policy</a></p>
+              <p class="footer-text"><a href="https://www.unibo.it/en/university/privacy-policy-and-legal-notes/legal-notes" alt="Legal notes" target="_black" class="footer-a">Legal notes</a></p>
+            </div>
+
+            <div class="top-footer second-section">
+              <p class="title">/DH.arc - Digital Humanities Advanced Research Centre</p>
+              <p class="footer-text"><a href="https://centri.unibo.it/dharc/en" target="_black" alt="Dharc website" class="link_footer footer-a">About</a></p>
+              <p class="footer-text"><a href="https://centri.unibo.it/dharc/en/research/projects-at-dh-arc" target="_black" alt="Dharc website" class="link_footer footer-a">Projects</a></p>
+              <p class="footer-text"><a href="https://centri.unibo.it/dharc/en/contacts" target="_black" alt="Dharc website" class="link_footer footer-a">Contacts</a></p>
+            </div>
+
+            <div class="bottom-footer first-section">
+              <p class="footer-text">© Copyright (c) 2020 by /DH.arc - Digital Humanities Advanced Research Centre + Department of Computer Science, University of Bologna.</p>
+            </div>
+            
         </footer>
     </body>
 </html>
