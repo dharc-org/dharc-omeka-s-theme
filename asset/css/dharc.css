@@ -6,6 +6,10 @@
   --footer_bottom_background-color: #414a4c;
 }
 
+a:hover{
+  opacity: 1;
+}
+
 @media screen and (min-width: 800px){
 
     header{
@@ -57,25 +61,40 @@
         text-align: center;
         border-top: lightgray solid 2px;
         border-bottom: lightgray solid 1px;
-        background-color: var(--footer_background-color);
         margin: 0!important;
         max-width: none!important;
+        padding: 0!important;
     }
     footer p{
       margin: 0!important;
     }
-    footer .top-footer.first-section{
+    footer a{
+      color: lightgray!important;
+      opacity: 0.85;
+      text-decoration: underline!important;
+    }
+    footer .top-footer{
+      background-color: var(--footer_background-color);
+      padding-bottom: 30px;
+    }
+    footer .bottom-footer{
+      color: lightgray;
+
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: var(--footer_bottom_background-color);
+    }
+    footer .top-footer .first-section{
       width: 40%;
       display: inline-block;
       text-align:left;
     }
-    footer .top-footer.second-section{
+    footer .top-footer .second-section{
       width: 40%;
       text-align:left;
       display: inline-block;
     }
     footer .bottom-footer{
-      background-color: var(--footer_bottom_background-color);
     }
     footer .footer-text{
       font-size: 11pt;
