@@ -10,6 +10,64 @@ a:hover{
   opacity: 1;
 }
 
+footer{
+        text-align: center;
+        border-top: lightgray solid 2px;
+        border-bottom: lightgray solid 1px;
+        margin: 0!important;
+        max-width: none!important;
+        padding: 0!important;
+    }
+    footer p{
+      margin: 0!important;
+    }
+    footer a{
+      color: lightgray!important;
+      opacity: 0.85;
+      text-decoration: underline!important;
+    }
+    footer .top-footer{
+      width: 100%;
+      text-align:center;
+      padding: 30px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: var(--footer_background-color);
+    }
+    footer .bottom-footer{
+      color: lightgray;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: var(--footer_bottom_background-color);
+    }
+    footer .top-footer .first-section{
+      vertical-align: top;
+      max-width: 40%;
+      display: inline-block;
+      text-align:left;
+    }
+
+    footer .top-footer .second-section{
+      margin-left: 30%;
+      width: 200px;
+      vertical-align: top;
+      text-align:left;
+      display: inline-block;
+    }
+
+    footer .bottom-footer{
+    }
+
+    footer .footer-text{
+      font-size: 10pt;
+    }
+
+    footer .title{
+      font-size: 14pt;
+      color: lightgray;
+    }
+
+
 @media screen and (min-width: 800px){
 
     header{
@@ -56,53 +114,6 @@ a:hover{
       display: block;
       height: 0px; /* the footer's total height */
     }
-
-    footer{
-        text-align: center;
-        border-top: lightgray solid 2px;
-        border-bottom: lightgray solid 1px;
-        margin: 0!important;
-        max-width: none!important;
-        padding: 0!important;
-    }
-    footer p{
-      margin: 0!important;
-    }
-    footer a{
-      color: lightgray!important;
-      opacity: 0.85;
-      text-decoration: underline!important;
-    }
-    footer .top-footer{
-      background-color: var(--footer_background-color);
-      padding-bottom: 30px;
-    }
-    footer .bottom-footer{
-      color: lightgray;
-
-      padding-top: 20px;
-      padding-bottom: 20px;
-      background-color: var(--footer_bottom_background-color);
-    }
-    footer .top-footer .first-section{
-      width: 40%;
-      display: inline-block;
-      text-align:left;
-    }
-    footer .top-footer .second-section{
-      width: 40%;
-      text-align:left;
-      display: inline-block;
-    }
-    footer .bottom-footer{
-    }
-    footer .footer-text{
-      font-size: 11pt;
-    }
-    footer .site-title{
-      font-size: 17pt;
-    }
-
 
     body.page #content .blocks{
       padding-right: 3%!important;
