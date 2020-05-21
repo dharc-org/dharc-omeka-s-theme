@@ -173,16 +173,16 @@ footer .title{
             position: relative;
             margin: 0 auto;
             left: 0%!important;
-	    display: table;
-            background-color: rgba(247, 247, 247,0.7) ;
+	        display: table;
+            background-color: rgba(247, 247, 247,0.83) ;
             top: 150px;
             padding: 15px;
             border: solid lightgray 2px;
             border-radius: 10px;
     }
     #search_pre .var-txt{
-            color: chocolate;
-            font-size: 18pt;
+            color: #B9770E;
+            font-size: 20pt;
     }
     #content #main_jumbotron{
       padding: 0 !important;
