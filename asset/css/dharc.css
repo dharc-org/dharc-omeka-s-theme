@@ -139,11 +139,12 @@ footer .title{
 
     #main_jumbotron{
             background-image: url("../../img/bg_img_4.jpg");
+            image-rendering: -webkit-optimize-contrast;
             background-repeat:no-repeat;
             background-size: cover;
             background-size: 100% 100%;
             background-color: #a16c6c;
-            opacity: 0.9;
+            opacity: 1;
             width: 100%;
             min-height: 450px;
             border-bottom: lightgray solid 5px;
