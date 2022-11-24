@@ -47,9 +47,9 @@ endif;
     echo '<div id="main_jumbotron" class="jumbotron">
 	<div id="search_container">
 	  <div id="search_pre">
-	   <span class="fixed-txt">Search within our Digital Library over </span>
-	   <span class="var-txt">'.$itemNum.'</span><span class="fixed-txt"> items and
-       <span class="var-txt">'.$item_setsNum.'</span> collections:</span>
+	   <span class="fixed-txt">Cerca nella Digital Library fra </span>
+	   <span class="var-txt">'.$itemNum.'</span><span class="fixed-txt"> risorse e
+       <span class="var-txt">'.$item_setsNum.'</span> collezioni:</span>
 	</div>
     <div id="jumbotron_search">';
     echo $this->partial('common/search-form');
@@ -61,6 +61,10 @@ endif;
 <?php $this->trigger('view.show.before'); ?>
 <div class="blocks">
     <?php echo $this->content; ?>
+    <div class="site-page-pagination">
+        <a class="btn btn-primary" href="javascript:history.back();" aria-label="previous page">
+        <i class="fa fa-arrow-left" aria-hiddenb="true"></i> Indietro</a>
+        </div>
 </div>
 <?php $this->trigger('view.show.after'); ?>
 <?php if ($showPagePagination): ?>
@@ -70,3 +74,5 @@ endif;
 <?php if ($is_view === true): ?>
   <script>init_view();</script>
 <?php endif; ?>
+
+

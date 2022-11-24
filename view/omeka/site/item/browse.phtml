@@ -36,6 +36,10 @@ $sortHeadings = [
     <h3><?php echo $translate('Item set'); ?></h3>
     <div class="metadata">
         <?php echo $itemSet->displayValues(); ?>
+        <div class="site-page-pagination">
+        <a class="btn btn-primary" href="javascript:history.back();" aria-label="previous page">
+        <i class="fa fa-arrow-left" aria-hiddenb="true"></i> Indietro</a>
+        </div>
     </div>
     <div class="item-set-items">
     <?php echo '<h3>' . $escape($translate('Items')) . '</h3>'; ?>
